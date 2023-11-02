@@ -1,0 +1,373 @@
+/* ここから下に記載していく */
+/* 全体 */
+*{
+    box-sizing: border-box;
+    color: #432;
+    scroll-behavior: smooth;
+}
+/* HEADER */
+.header {
+    display: flex; /* ヘッダー要素の横並び */
+    justify-content: space-between; /* 子要素を均等配置する。左右端の要素を親要素の端に接して配置する */
+}
+.logo {
+    width: 250px;
+}
+.main-nav {
+    display: flex;
+    margin: 50px 50px 50px 0; /* ナビゲーションの上下右50px空白 */
+}
+.main-nav li {
+    margin-left: 50px; /* ナビゲーションの左50px空白 */
+}
+.main-nav a {
+    text-decoration: none; /* テキストの下線を消す　通常リンクを指定すると下線が引かれるため */
+    font-size: 21px; /* ナビゲーションの文字サイズ21px */
+}
+.main-nav a:hover {
+    color: #ffd61a; /* カーソルを当てたら色が変わる*/
+}
+
+/*  MAIN */
+.box{
+    position: relative;
+  }
+.box img {
+    width: 100%;
+    height: 80vh;
+}
+.center {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -90%);
+    background-color: rgba(252, 252, 252, 0.5);
+    padding: 10px;
+}
+.center-sub {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-14%, -100%);
+    font-size: 1.5rem;
+    background-color: rgba(252, 252, 252, 0.5);
+    padding: 10px;
+}
+  
+
+/* TOP */
+.main-title {
+    font-size: 3rem; /* メインタイトルの文字サイズ */
+    margin-bottom: 30px; /* メインタイトルの下に空白 */
+}
+.sub_title {
+    font-size: 2rem; /* サブタイトルの文字サイズ */
+}
+.never {
+    color: #ffdc00; /* Neverの文字色 */
+    font-weight: bold; /* Neverの文字幅 */
+    font-size: 2.5rem;
+}
+
+/* MENU共通設定(ABOUT,COURSE,ACCESS,CONTACT) */
+.menu {
+    text-align: center; /* 各メニューの文字位置を中央 */
+}
+.menu-sub {
+    margin-bottom: 60px; /* 日本語タイトルの下空白 */
+    font-size: 18px; /* 日本語タイトルの文字サイズ */
+    line-height: 2; /* 行間 */
+}
+
+/* ABOUT,NEWSの設定 */
+.menu_title_y {
+    font-size: 24px;
+    color: #ffd61a;
+    font-weight: bold;
+    padding: 60px 0 30px 0;
+}
+
+/* COURSE,ACCESS,CONTACTの設定 */
+.menu_title_b {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 60px 0 30px 0;
+}
+
+/* ABOUT */
+.main-text {
+    padding-bottom: 40px; /* 本文の下に空白 */
+}
+.container {
+    margin-top: 80px;
+    max-width: 100%;  /* 画像全体の横幅 */
+    display: flex;      /* 画像を横並び */
+}
+.container img {
+    display: inline-block;  /* 画像横並び */
+    width: 25%;             /* 画像を４分割 */
+    height: auto;           /* 画像の高さは自動 */
+}
+
+/* COURSE */
+.info_content {
+    display: flex;        /* 画像とテキスト横並び */
+    align-items: center;  /* テキスト中央揃え */
+    background-color: #fafafa;  /* 背景色設定 */
+}
+.info_text {
+    flex: 1;
+    margin-left: 50px;    /* 画像横の空白 */
+}
+.info_area img {
+    flex: 1;
+    width: 50%;    /* 画像サイズはテキストと1/2ずつ */
+    height: 400px;
+    object-fit: cover;   /* 画像トリミング */
+}
+.text {
+    width: 480px;    /* テキスト幅 */
+}
+.text_title {
+    font-size: 24px;        /* テキストタイトルのフォントサイズ */
+    font-weight: bold;      /* テキストタイトル太字 */
+    margin-bottom: 40px;    /* テキストタイトル下に空白 */
+}
+.text_content {
+    line-height: 2;         /* 行間 */
+}
+
+.info_content_reverse {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    flex-direction: row-reverse;    /* 画像とテキストの配置を逆 */
+}
+.info_text_reverse {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end; 
+    margin-right: 50px;
+}
+.gradation {
+    background: linear-gradient(90deg, #4158D0, #C850C0 30%, #FFCC70);
+    background: -webkit-linear-gradient(0deg, #4158D0, #C850C0 30%, #FFCC70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+/* NEWS */
+.news_content {
+    display: flex;    /* ニュースコンテンツを横並び */
+    flex-direction: row;
+    justify-content: center    /* ニュースコンテンツを中央揃え */
+}
+.news_item {
+    width: 300px;    /* 各ニュースコンテンツの横幅 */
+    margin-left: 30px;    /* 各ニュースコンテンツの左に空白 */
+}
+.news_item:hover,
+.news_item:focus {
+    background: rgba(249, 241, 192, 0.7);    /* ホバーアクション */
+}
+
+.news_item img {
+    width: 300px;    /* ニュース画像の横幅 */
+    height: 190px;
+    margin-bottom: 30px;    /* ニュース画像の下に空白 */
+    object-fit: cover; 
+}
+/* .news_item img {
+    width: 300px;
+    margin-bottom: 30px;
+} */
+
+.news_info {
+    width: 300px;    /* ニューステキストの横幅 */
+    text-align: start;    /* ニューステキストの開始位置（左端） */
+}
+.news_detail {
+    margin-top: 24px;;    /* テキストタイトルとテキストの空白 */
+    line-height: 2;     /* テキスト行間 */
+}
+.btn {
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    background: #ffd61a;
+    margin: 60px 0;
+}
+.btn:hover,
+.btn:focus {
+    background: rgba(240, 131, 0, 0.7);  /* ホバーアクション */
+}
+
+/* ACCESS */
+.access-title {
+    background-color: #fafafa;  /* accessコンテンツの背景色 */
+
+}
+.access_map {
+    width: 100%;  /* mapの横幅 */
+}
+.access_content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.access_com {
+    width: 70%;  /* テキスト横幅指定 */
+    margin: 60px 0;  /* テキスト上下空白 */
+}
+.company_list {
+    display: flex;
+    flex-wrap: wrap;  /* テキスト折り返し */
+    line-height: 30px;  /* 行間 */
+    text-align: left;  /* テキスト左寄せ */
+}
+.company_list dt {
+    width: 40%;  /* 学校名などのテキスト幅 */
+}
+.company_list dd {
+    width: 60%;  /* 納豆ネバデミーなどのテキスト幅 */
+}
+
+/* CONTACT */
+.contact-text-a {
+    line-height: 30px;  /* 行間 */
+    margin-bottom: 30px;
+}
+.contact-text-b {
+    line-height: 30px;  /* 行間 */
+    margin-bottom: 70px;
+}
+
+/* CONTACT FORM */
+.contact {
+    width: 600px;
+    margin: 0 auto;
+}
+.contact-table {  /* tableレイアウト */
+    width: 100%;
+}
+.contact-item,     /* item=カラム名、body=フィールド */
+.contact-body {
+    padding: 20px 64px 20px 16px;
+    border-top: 1px solid #bfbfbf;
+}
+
+.contact-item {
+    vertical-align: top;  /* テキスト上寄せ */
+    text-align: left; /* テキスト左寄せ */
+    width: 40%; /* テキスト（カラム名）幅 */
+    line-height: 16px;  /* 行間 */
+    border-right: 1px solid #bfbfbf;
+}
+.table {
+    border-top: 2px solid #bfbfbf;
+}
+.contact-body {
+    width: 60%; /* テキスト（フィールド）幅 */
+}
+.name {
+    padding-bottom: 8px;
+}
+
+.form-text { /* フォーム */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    max-width: 400px;
+}
+.form-select { /* セレクトボックス */
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* チェックボックス01 */
+input[type=checkbox] {
+    display: none;
+}
+.checkbox01 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    padding: 24px 40px;
+    position: relative;
+    width: auto;
+}
+.checkbox01::before {
+    background: #fff;
+    border: 1px solid #231815;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.checkbox01::after {
+    border-right: 3px solid #ed7a9c;
+    border-bottom: 3px solid #ed7a9c;
+    content: '';
+    display: block;
+    height: 9px;
+    left: 10px;
+    margin-top: -7px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 5px;
+}
+input[type=checkbox]:checked + .checkbox01::after {
+    opacity: 1;
+}
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.button {
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #707070;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: small;
+}
+.footer-text {
+    color: #ccc;
+}
+.footer ul {
+    margin-bottom: 24px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.footer ul li {
+    margin:  0 20px;
+}
+.footer ul li img {
+    width: 24px;
+    height: 24px;
+}
